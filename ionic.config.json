@@ -1,0 +1,7 @@
+{
+  "name": "AppOpinion",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

@@ -1,0 +1,79 @@
+ .login-content {
+    --background: url('/assets/img/logo.png') no-repeat center center / cover;
+    position: relative;
+  }
+  /*
+  .login-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8); Fondo translúcido para los campos 
+    border-radius: 10px;
+  }
+   */
+  /* Estilo para el contenido del formulario de inicio de sesión */
+.login-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-wrapper {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  opacity: 0;  /* Inicialmente invisible */
+  transform: translateY(50px); /* Desplazamiento inicial hacia abajo */
+  animation: fadeInUp 0.8s ease-out forwards; /* Animación al cargar */
+}
+
+/* Estilo para aplicar el degradado a las casillas */
+ion-item {
+  --background: linear-gradient(135deg, #4e9ff5, #8e54e9); /* Degradado de azul a morado */
+  --border-radius: 12px;
+  --padding: 8px;
+  margin-bottom: 16px;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeInUp 0.6s ease-out forwards;
+  animation-delay: 0.2s;
+}
+
+/* Para mantener el fondo transparente en el input y mostrar el degradado */
+ion-input {
+  --background: transparent;
+  --padding: 12px;
+  color: white; /* Ajusta el color del texto si es necesario */
+}
+
+/* Color del texto de los labels para mayor contraste */
+ion-label {
+  color: white;
+}
+
+/* Estilo para los botones */
+ion-button {
+  margin-top: 20px;
+  --background: linear-gradient(135deg, #4e9ff5, #8e54e9);
+  --border-radius: 12px;
+  --padding: 12px;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeInUp 0.6s ease-out forwards;
+  animation-delay: 0.4s;
+}
+
+/* Definición de la animación para desvanecer y subir los elementos */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
